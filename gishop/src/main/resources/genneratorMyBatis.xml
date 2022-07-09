@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <context id="DB2Tables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="org.postgresql.Driver"
+        connectionURL="jdbc:postgresql://localhost:5432/postgres?currentSchema=gishop"
+        userId="postgres"
+        password="postgres">
+        <property name="nullCatalogMeansCurrent" value="true" />
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.sondh.gishop.entity" targetProject="gishop"/>
+
+    <sqlMapGenerator targetPackage="com.sondh.gishop.sql" targetProject="gishop"/>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.sondh.gishop.mapper" targetProject="gishop"/>
+
+    <table tableName="users"></table>
+    <table tableName="user_address"></table>
+    <table tableName="user_payment"></table>
+    <table tableName="product"></table>
+    <table tableName="product_category"></table>
+    <table tableName="product_inventory"></table>
+    <table tableName="discount"></table>
+    <table tableName="cart_item"></table>
+    <table tableName="shopping_session"></table>
+    <table tableName="order_items"></table>
+    <table tableName="order_detail"></table>
+    <table tableName="payment_details"></table>
+
+  </context>
+</generatorConfiguration>
